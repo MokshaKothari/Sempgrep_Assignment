@@ -1,0 +1,20 @@
+{
+  "name": "secure-vscode-helper",
+  "version": "1.0.0",
+  "main": "extension.js",
+  "activationEvents": [
+    "onLanguage:python"
+  ],
+  "contributes": {
+    "languages": [{ "id": "python", "extensions": [".py"] }],
+    "commands": [{
+      "command": "extension.runSemgrep",
+      "title": "Run Semgrep Security Scan"
+    }]
+  },
+  "scripts": {},
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "dependencies": {}
+}
