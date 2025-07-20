@@ -10,8 +10,8 @@ def run_semgrep(filepath):
         ["semgrep", "--config", rules_path, filepath, "--json"],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
-        encoding='utf-8',  # -------------------Force UTF-8
-        errors='replace'   # -------------------Replace invalid characters safely
+        encoding='utf-8',
+        errors='replace'
     )
 
     if result.returncode != 0 and not result.stdout.strip():
